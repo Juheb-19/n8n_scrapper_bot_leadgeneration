@@ -1,0 +1,28 @@
+{
+  "name": "IndieHackers Scraper",
+  "nodes": [
+    {
+      "id": "1",
+      "type": "httpRequest",
+      "name": "Fetch IndieHackers"
+    },
+    {
+      "id": "2",
+      "type": "htmlExtract",
+      "name": "Parse Startup Data"
+    },
+    {
+      "id": "3",
+      "type": "googleSheets",
+      "name": "Append to Sheet"
+    }
+  ],
+  "connections": {
+    "1": [
+      "2"
+    ],
+    "2": [
+      "3"
+    ]
+  }
+}

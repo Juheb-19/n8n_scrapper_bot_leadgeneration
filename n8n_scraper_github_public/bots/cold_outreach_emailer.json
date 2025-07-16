@@ -1,0 +1,28 @@
+{
+  "name": "Cold Outreach Bot",
+  "nodes": [
+    {
+      "id": "1",
+      "type": "googleSheets",
+      "name": "Read New Leads"
+    },
+    {
+      "id": "2",
+      "type": "emailSend",
+      "name": "Send Email"
+    },
+    {
+      "id": "3",
+      "type": "googleSheets",
+      "name": "Update Status"
+    }
+  ],
+  "connections": {
+    "1": [
+      "2"
+    ],
+    "2": [
+      "3"
+    ]
+  }
+}
